@@ -1,7 +1,9 @@
-run: naruto.c main.c
+all: run clear
 
+run:
+	@echo "Inicializando..."
 	gcc -c naruto.c && gcc -o main main.c naruto.o && ./main
 
-clean:
-
-	rm -rf naruto.o && rm -rf main
+clear:
+	@echo "Deletando lixo..."
+	rm naruto.o main
